@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="theme.css">
+    <script src="theme.js"></script>
+    <link rel="icon" type="image/PNG" href="Icones/BrainStorm Logo.png">
+
+</head>
+<body>
+
+    <nav id="navegacao">
+        <img src="Icones/BrainStorm - logobranca.png">
+        <h4>BrainStorm</h4>
+        <h6>Engenharia</h6>
+        <a href="#pedido">Vamos conversar <span aria-hidden="true">→</span></a>
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="portfolio.html">Portifólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+
+    </nav>
+
+    <header id="chamada">
+        <h4>Vamos conversar</h4>
+        <h1>Conte sua próxima grande ideia.</h1>
+        <p> Um novo site, um aplicativo ou uma solução para o seu 
+            negócio. O primeiro passo é entender o que você quer 
+            construir. 
+        </p>
+
+    </header>
+
+    <main>
+
+        <section id="conexoes">
+            <h4>Conexões que começam aqui</h4>
+            <h1>Vamos construir<br>algo juntos?</h1>
+            <p>Escolha o canal que combina com você. Nossos 
+                contatos oficiais serão disponibilizados após 
+                confirmação da empresa.
+            </p>
+
+            <ul id="redes_sociais">
+                <li>
+                    <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"></rect><path d="m4.5 7 7.5 6 7.5-6"></path></svg></span>
+                    <span><strong>E-mail</strong><small>Endereço oficial a confirmar</small></span>
+                </li>
+                <li>
+                    <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-11.2 6.5L4 19l1.2-4.1A7.5 7.5 0 1 1 20 11.5Z"></path></svg></span>
+                    <span><strong>WhatsApp</strong><small>Número oficial a confirmar</small></span>
+                </li>
+                <li>
+                    <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"></rect><circle cx="12" cy="12" r="3.5"></circle><path d="M17.5 6.8h.01"></path></svg></span>
+                    <span><strong>Instagram</strong><small>Perfil oficial a confirmar</small></span>
+                </li>
+                <li>
+                    <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9v9M6 6.5v.01M10 18v-9h4v1.5a3 3 0 0 1 6 0V18"></path><path d="M10 13v5"></path></svg></span>
+                    <span><strong>LinkedIn</strong><small>Página oficial a confirmar</small></span>
+                </li>
+                <li>
+                    <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3.8h3l1.4 4-2 1.8a15 15 0 0 0 5 5l1.8-2 4 1.4v3a2 2 0 0 1-2.2 2A16 16 0 0 1 5 6a2 2 0 0 1 2-2.2Z"></path></svg></span>
+                    <span><strong>Telefone</strong><small>Número de atendimento a confirmar</small></span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="pedido">
+            <h3>Seu projeto começa com uma conversa.</h3>
+            <p> Prepare um resumo da sua ideia para compartilhar com a nossa 
+                equipe.
+            </p>
+
+            <form id="pedido-form">
+                <div class="form-row">
+                    <div class="field">
+                        <label for="nome">Seu nome</label>
+                        <input id="nome" name="nome" type="text" placeholder="Como podemos chamar você?" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="email" placeholder="voce@empresa.com" autocomplete="email" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="empresa">Empresa <span>(opcional)</span></label>
+                    <input id="empresa" name="empresa" type="text" placeholder="Nome da sua empresa" autocomplete="organization">
+                </div>
+                <div class="field">
+                    <label for="catalogo">O que você precisa?</label>
+                    <select id="catalogo" name="servico" required>
+                        <option value="">Selecione um serviço</option>
+                        <option value="Sites & experiências web">Sites & experiências web</option>
+                        <option value="Aplicativos sob medida">Aplicativos sob medida</option>
+                        <option value="Serviços de infraestrutura">Serviços de infraestrutura</option>
+                        <option value="Soluções digitais">Soluções digitais</option>
+                        <option value="Quero conversar sobre uma ideia">Quero conversar sobre uma ideia</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="projeto">Conte um pouco sobre seu projeto</label>
+                    <textarea id="projeto" name="projeto" placeholder="Sua ideia, seus objetivos e o que você tem em mente..." required></textarea>
+                </div>
+
+                <p class="privacy-note">Seus dados não são enviados nem armazenados. Enquanto os canais oficiais não são informados, você pode preparar e baixar seu pedido.</p>
+                <button type="submit">Preparar meu pedido <span aria-hidden="true">→</span></button>
+                <p id="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© 2026 BrainStorm Engenharia. Todos os direitos reservados.</p>
+        <a href="sobre.html"> Sobre nós </a>
+        <a href="servicos.html"> Serviços </a>
+        <a href="contato.html"> Contato</a>
+
+
+    </footer>
+
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+   </div>
+   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+   <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+   </script>
+
+   <script src="contato.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,215 @@
+:root {
+	color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+	color-scheme: light;
+	--page: #f5f4f8;
+	--surface: #e9e6ef;
+	--surface-raised: #eee8ff;
+	--text: #24212e;
+	--muted: #696578;
+	--accent: #704ac4;
+	--green: #137b58;
+	--line: rgba(36, 33, 46, 0.14);
+	--primary-color: #f5f4f8;
+	--secondary-color: #e9e6ef;
+	--third-color: #eee8ff;
+	--quaternary-color: #353342;
+	--quinary-color: #704ac4;
+	--senary-color: #24212e;
+	--septenary-color: #696578;
+	--accent-green: #137b58;
+	--surface-color: #e9e6ef;
+	--surface-raised: #eee8ff;
+	--text-color: #24212e;
+	--muted-color: #696578;
+	--accent-color: #704ac4;
+	--line-color: rgba(36, 33, 46, 0.14);
+}
+
+:root[data-theme='light'] body {
+	background-color: var(--page, var(--primary-color));
+	color: var(--text, var(--text-color, var(--senary-color)));
+}
+
+:root[data-theme='light'] #navegacao img {
+	filter: brightness(0) opacity(0.78);
+}
+
+:root[data-theme='light'] #navegacao::before {
+	filter: brightness(0);
+}
+
+:root[data-theme='light'] #cabecalho_inicial,
+:root[data-theme='light'] #chamada,
+:root[data-theme='light'] #ideias,
+:root[data-theme='light'] #funcao {
+	background: #eae5f5;
+}
+
+:root[data-theme='light'] #chamada,
+:root[data-theme='light'] #ideias {
+	box-shadow: 0 0 0 100vmax #eae5f5;
+}
+
+:root[data-theme='light'] #cabecalho_inicial > p {
+	color: rgba(36, 33, 46, 0.72);
+}
+
+:root[data-theme='light'] #cabecalho_inicial::before,
+:root[data-theme='light'] #cabecalho_inicial::after {
+	opacity: 0.34;
+}
+
+:root[data-theme='light'] #propositos {
+	background: rgba(233, 230, 239, 0.97);
+}
+
+:root[data-theme='light'] .secoes {
+	background: rgba(255, 255, 255, 0.72);
+}
+
+:root[data-theme='light'] .secoes:hover {
+	background: rgba(238, 232, 255, 0.9);
+}
+
+:root[data-theme='light'] #ideiasNaPratica {
+	background: #e9e6ef;
+}
+
+:root[data-theme='light'] #ideiasNaPratica li::before,
+:root[data-theme='light'] #ideiasNaPratica li:nth-child(2)::before,
+:root[data-theme='light'] #ideiasNaPratica li:nth-child(3)::before {
+	color: #f5f5f7;
+}
+
+:root[data-theme='light'] #ideiasNaPratica li:nth-child(3)::before {
+	color: #20a879;
+}
+
+:root[data-theme='light'] #mentes li {
+	background: #fff;
+}
+
+:root[data-theme='light'] #mentes li:hover {
+	background: #fbfaff;
+}
+
+:root[data-theme='light'] #contato {
+	color: #fff;
+}
+
+:root[data-theme='light'] #contato p {
+	color: rgba(255, 255, 255, 0.82);
+}
+
+:root[data-theme='light'] #contato a {
+	background: #24212e;
+	color: #c1a8ff;
+}
+
+:root[data-theme='light'] #contato a:hover {
+	background: #353342;
+}
+
+:root[data-theme='light'] .field input,
+:root[data-theme='light'] .field select,
+:root[data-theme='light'] .field textarea {
+	border-color: rgba(36, 33, 46, 0.17);
+	background: #fff;
+	color: #24212e;
+}
+
+:root[data-theme='light'] .field input::placeholder,
+:root[data-theme='light'] .field textarea::placeholder {
+	color: #777486;
+}
+
+:root[data-theme='light'] #funcao + main > section:not(#insight, #contato) {
+	background: #fff;
+}
+
+:root[data-theme='light'] #funcao + main > section:not(#insight, #contato):hover {
+	background: #fbfaff;
+}
+
+:root[data-theme='light'] .preview-site,
+:root[data-theme='light'] .preview-app,
+:root[data-theme='light'] .preview-infra,
+:root[data-theme='light'] .browser-window,
+:root[data-theme='light'] .phone-window {
+	color: #f5f5f7;
+}
+
+.theme-toggle {
+	position: fixed;
+	right: 22px;
+	bottom: 22px;
+	z-index: 9999;
+	display: grid;
+	place-items: center;
+	width: 46px;
+	height: 46px;
+	padding: 0;
+	border: 1px solid rgba(174, 137, 255, 0.48);
+	border-radius: 50%;
+	background: #24212e;
+	box-shadow: 0 5px 20px rgba(10, 9, 18, 0.26);
+	color: #c1a8ff;
+	cursor: pointer;
+	transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.theme-toggle:hover {
+	transform: translateY(-2px);
+	background: #353342;
+}
+
+.theme-toggle svg {
+	width: 20px;
+	height: 20px;
+	fill: none;
+	stroke: currentColor;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 1.7;
+}
+
+.theme-toggle__sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+:root[data-theme='light'] .theme-toggle {
+	border-color: rgba(112, 74, 196, 0.32);
+	background: #fff;
+	box-shadow: 0 5px 20px rgba(36, 33, 46, 0.16);
+	color: #704ac4;
+}
+
+:root[data-theme='light'] .theme-toggle:hover {
+	background: #eee8ff;
+}
+
+@media (max-width: 560px) {
+	.theme-toggle {
+		right: 14px;
+		bottom: 14px;
+		width: 42px;
+		height: 42px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.theme-toggle {
+		transition-duration: 0.01ms;
+	}
+}
